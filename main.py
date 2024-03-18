@@ -32,36 +32,36 @@ class Spot:
 		return self.row, self.col
 	# If path is closed = RED
 	def is_closed(self):
-		return self.color == RED
+		return self.color == ORANGE
 	# If path is open = GREEN
 	def is_open(self):
-		return self.color == GREEN
+		return self.color == BLUE
 
 	def is_barrier(self):
 		return self.color == BLACK
 	# Start State
 	def is_start(self):
-		return self.color == ORANGE
+		return self.color == RED
 	# End State
 	def is_end(self):
-		return self.color == TURQUOISE
+		return self.color == BLUE
 	# Resets all tiles to white
 	def reset(self):
 		self.color = WHITE
 	def make_start(self):
-		self.color = ORANGE
-
-	def make_closed(self):
 		self.color = RED
 
+	def make_closed(self):
+		self.color = ORANGE
+
 	def make_open(self):
-		self.color = GREEN
+		self.color = BLUE
 
 	def make_barrier(self):
 		self.color = BLACK
 
 	def make_end(self):
-		self.color = TURQUOISE
+		self.color = RED
 
 	def make_path(self):
 		self.color = PURPLE
